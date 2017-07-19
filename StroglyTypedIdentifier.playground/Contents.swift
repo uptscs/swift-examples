@@ -85,7 +85,6 @@ struct PersonWithGenericType:Identifiable{
 //If you want to work with class, then provide a better helper class
 
 //This is amazing as following doesn't work. More is covered in typealias swift example
-
 //protocol IdentifiableClass {
 //    typealias Identifier = GenericIdentifier<Self>
 //}
@@ -97,9 +96,7 @@ extension IdentifiableClass {
     typealias Identifier = GenericIdentifier<Self>
 }
 
-//FIXME: When it implements IdentifiableClass then it keeps giving error: note: did you mean 'Identifier'?
 class PersonClass:IdentifiableClass{
-//    typealias Identifier = GenericIdentifier<PersonClass>
     let id: Identifier
     var name: String
     var age: Int?
